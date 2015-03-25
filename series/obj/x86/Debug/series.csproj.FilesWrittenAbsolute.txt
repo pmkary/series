@@ -1,0 +1,16 @@
+/Users/pmk/Projects/series/series/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/pmk/Projects/series/series/bin/Debug/series.exe.mdb
+/Users/pmk/Projects/series/series/bin/Debug/series.exe
+/Users/pmk/Projects/series/series/obj/x86/Debug/series.exe
+/Users/pmk/Projects/series/series/obj/x86/Debug/series.exe.mdb
+/Users/pmk/Projects/series/series/bin/Debug/Mermaid.dll
+/Users/pmk/Projects/series/series/bin/Debug/ArendelleNCalc.dll
+/Users/pmk/Projects/series/series/bin/Debug/Antlr3.Runtime.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/series.exe.mdb
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/series.exe
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Debug/series.exe
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Debug/series.exe.mdb
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Mermaid.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/ArendelleNCalc.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Antlr3.Runtime.dll

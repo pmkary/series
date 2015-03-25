@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="series/Levels.cs">
+    <Files>
+      <File FileName="series/Program.cs" Line="5" Column="17" />
+      <File FileName="series/UI.cs" Line="1" Column="1" />
+      <File FileName="series/RunLevel.cs" Line="33" Column="32" />
+      <File FileName="series/Levels.cs" Line="11" Column="4" />
+      <File FileName="series/ArrayTools.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
