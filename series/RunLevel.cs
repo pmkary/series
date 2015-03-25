@@ -11,7 +11,7 @@ namespace Series
 		/// <param name="level_number">Level_number.</param>
 		public static void Init_Level (int level_number ) {
 
-			Console.Clear ();
+
 
 			//
 			// GETTING THE LEVEL MAP
@@ -33,7 +33,16 @@ namespace Series
 
 			while (were_not_done_yet) {
 
+				if ( level_number == 3 ) {
+
+					UI.p_intro_screen ();
+
+				}
+
+
+				Console.Clear ();
 				Console.WriteLine ("\n\n");
+
 
 				//
 				// SHOWING THE LEVEL TO THE USER
@@ -51,27 +60,7 @@ namespace Series
 				// INIT NCALC
 				//
 
-				Expression exp = new Expression (formula.ToLower ());
-
-				exp.EvaluateFunction += delegate(string name, FunctionArgs args) {
-
-					if (name == "sgn") {
-
-						if ((int)args.Parameters[0].Evaluate() == 0) {
-
-							args.Result = 0;
-
-						} else if ((int)args.Parameters[0].Evaluate() > 0 ) {
-
-							args.Result = 1;
-
-						} else {
-
-							args.Result = -1;
-
-						}
-					}
-				};
+				Expression exp = new Expression (formula);
 
 
 				//
@@ -155,4 +144,3 @@ namespace Series
 		}
 	}
 }
-

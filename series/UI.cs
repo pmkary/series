@@ -212,12 +212,20 @@ namespace Series
 
 
 
-
 		public static void intro_screen () {
 
 			Console.Clear ();
 			Console.WriteLine ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: I N T R O :::::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │\n   │ Welcome to Kary Series. It's about fining the general formula │\n   │ of sequences. In each level you will get 10 first index of a  │\n   │ sequence and you have to find a formula for it. For example:  │\n   │                                                               │\n   │     [ 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 ]                     │\n   │                                                               │\n   │ And then you will see a prompt like >>> which you have to     │\n   │ your formula there. You have to use parameter `x` as your     │\n   │ index number so the formula will be something like this:      │\n   │                                                               │\n   │     >>> x * 2 - 1                                             │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
+			UI.enter_to_continue ("Press any key to say Got It!", 0);
+		}
 
+
+
+
+		public static void p_intro_screen () {
+
+			Console.Clear ();
+			Console.WriteLine ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: I N T R O :::::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │\n   │ You can get the previous index's value by using parameter     │\n   │ `p` for example look at this sequence:                        │\n   │                                                               │\n   │     [ 1, 3, 6, 10, 15, 21, 28, 36, 45, 55 ]                   │\n   │                                                               │\n   │ Each index is the sum of it's previous index and it's         │\n   │ current index number so the formula will be:                  │\n   │                                                               │\n   │     >>> p + x                                                 │\n   │                                                               │\n   │ NOTE: for the very first index `p` returns zero.              │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
 			UI.enter_to_continue ("Press any key to say Got It!", 0);
 		}
 	}

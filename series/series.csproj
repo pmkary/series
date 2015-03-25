@@ -31,10 +31,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="Mermaid">
-      <HintPath>..\..\..\Dropbox\Document\Source Codes\Mermaid\Mermaid\bin\Debug\Mermaid.dll</HintPath>
+      <HintPath>..\..\Mermaid\Mermaid\bin\Debug\Mermaid.dll</HintPath>
     </Reference>
     <Reference Include="ArendelleNCalc">
-      <HintPath>..\..\..\Dropbox\Document\Source Codes\Arcade IDE\Binary\ArendelleNCalc.dll</HintPath>
+      <HintPath>..\..\Arcade IDE\Binary\ArendelleNCalc.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
