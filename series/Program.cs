@@ -9,18 +9,24 @@ namespace Series
 
 			UI.welcome ();
 			UI.enter_to_continue ("press any key to start...", 0);
-
+			UI.intro_screen ();
 
 			bool cont_1 = true;
 			int level = 1;
 
 			while (cont_1) {
 
-				UI.setTitle (level);
+				if (Levels.get_max_level () >= level ) {
 
-				RunLevel.Init_Level (level);
+					UI.setTitle (level);
+					RunLevel.Init_Level (level);
+					level++;
 
-				cont_1 = false;
+				} else {
+
+					UI.you_won_screen ();
+					cont_1 = false;
+				}
 			}
 		}
 	}

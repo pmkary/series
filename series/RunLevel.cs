@@ -5,7 +5,10 @@ namespace Series
 {
 	public class RunLevel
 	{
-
+		/// <summary>
+		/// Runs a level
+		/// </summary>
+		/// <param name="level_number">Level_number.</param>
 		public static void Init_Level (int level_number ) {
 
 			Console.Clear ();
@@ -129,14 +132,15 @@ namespace Series
 
 						Console.Clear ();
 						UI.failed_profile (test_results, level_array);
-						UI.enter_to_continue ("try again...",0);
+						UI.enter_to_continue ("try again...", 0);
 						Console.Clear ();
 
 					}
 
 				} else {
 
-					UI.enter_to_continue ("Evaluation problems! Try again please...",0);
+					UI.enter_to_continue ("Evaluation problems! Try again please...", 0);
+					Console.Clear ();
 
 				}
 
