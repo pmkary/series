@@ -45,8 +45,7 @@ namespace Series
 				// ASKING FOR FORMULA:
 				//
 
-				string formula = UI.input ();
-
+				string formula = UI.input (); if (formula == "") { formula = "0"; };
 
 				//
 				// INIT NCALC
@@ -85,8 +84,16 @@ namespace Series
 
 				for (int i = 0; i < 10; i++) {
 
+					// index
 					exp.Parameters ["x"] = i + 1;
 
+					// previous index
+					if ( i > 0 ) {
+						exp.Parameters ["p"] = test_results [i - 1];
+					} else {
+						exp.Parameters ["p"] = 0;
+					}
+						
 					int temp_result = 0;
 
 					try {
