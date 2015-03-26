@@ -73,6 +73,9 @@ make sure you make it to see:
    │                                                               │
    └───────────────────────────────────────────────────────────────┘
 ```
+## Libs you need
+
+You have to include [Panther](https://github.com/karysystems/panther) and [NCalc](http://ncalc.codeplex.com/).
 
 ## Thanks
 

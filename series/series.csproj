@@ -36,6 +36,9 @@
     <Reference Include="ArendelleNCalc">
       <HintPath>..\..\Arcade IDE\Binary\ArendelleNCalc.dll</HintPath>
     </Reference>
+    <Reference Include="Panther">
+      <HintPath>..\..\Panther\Panther\bin\Release\Panther.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />

@@ -1,0 +1,8 @@
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Release/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Release/series.exe.mdb
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Release/series.exe
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Release/series.exe
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Release/series.exe.mdb
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Release/Mermaid.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Release/ArendelleNCalc.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Release/Antlr3.Runtime.dll

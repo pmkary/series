@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+using System;
+using Panther.Text;
 
 namespace Series
 {
@@ -154,12 +156,14 @@ namespace Series
 			UI.WriteLine ("Your formula is no match to our sequance. Here you can see");
 			UI.WriteLine ("the first 10 index of your evaluated formula:");
 			UI.WriteLine ("");
-			UI.WriteLine (" #   │ Test Results            │ Expectations ");
-			UI.WriteLine ("─────┼─────────────────────────┼─────────────────────────────");
+			UI.WriteLine (" #    │ Test Results            │ Expectations ");
+			UI.WriteLine ("──────┼─────────────────────────┼────────────────────────────");
 
 			for (int i = 1 ; i <= inps.Length ; i++) {
 
-				UI.WriteLine (" " + i.ToString ().PadRight (3) + " │ " + inps [i - 1].ToString ().PadRight (24) + "│ "  + expects[i - 1 ]);
+				var roman_i = Panther.Text.Numerics.Roman (i).PadRight (4);
+
+				UI.WriteLine (" " + roman_i + " │ " + inps [i - 1].ToString ().PadRight (24) + "│ "  + expects[i - 1 ]);
 
 			}
 				
