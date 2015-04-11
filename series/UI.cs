@@ -1,6 +1,7 @@
 ﻿
 using System;
 using Panther.Text;
+using Panther;
 
 namespace Series
 {
@@ -29,9 +30,9 @@ namespace Series
 
 		public static void welcome () {
 
-			Console.Clear ();
-			Console.Title = "Kary Series";
-			Console.WriteLine ("\n\n   ┌┬────────┬─────────────────────────────────────────────────────┐\n   ││  KARY  │                                                     │\n   │└────────┘                                                     │\n   │     ___       ___       ___       ___       ___       ___     │\n   │    /\\  \\     /\\  \\     /\\  \\     /\\  \\     /\\  \\     /\\  \\    │\n   │   /::\\  \\   /::\\  \\   /::\\  \\   _\\:\\  \\   /::\\  \\   /::\\  \\   │\n   │  /\\:\\:\\__\\ /::\\:\\__\\ /::\\:\\__\\ /\\/::\\__\\ /::\\:\\__\\ /\\:\\:\\__\\  │\n   │  \\:\\:\\/__/ \\:\\:\\/  / \\;:::/  / \\::/\\/__/ \\:\\:\\/  / \\:\\:\\/__/  │\n   │   \\::/  /   \\:\\/  /   |:\\/__/   \\:\\__\\    \\:\\/  /   \\::/  /   │\n   │    \\/__/     \\/__/     \\|__|     \\/__/     \\/__/     \\/__/    │\n   │                                                               │\n   ├───────────────────────────────────────────────────────────────┤\n   │:::::::::::::::::  SEE HOW GOOD YOU'RE IN MATH  :::::::::::::::│\n   ├───────────────────────────────────────────────────────────────┤\n   └───────────────────────────────────────────────────────────────┘\n");
+			Terminal.Clean ();
+			Terminal.Title = "Kary Series";
+			Terminal.PrintLn ("\n\n   ┌┬────────┬─────────────────────────────────────────────────────┐\n   ││  KARY  │                                                     │\n   │└────────┘                                                     │\n   │     ___       ___       ___       ___       ___       ___     │\n   │    /\\  \\     /\\  \\     /\\  \\     /\\  \\     /\\  \\     /\\  \\    │\n   │   /::\\  \\   /::\\  \\   /::\\  \\   _\\:\\  \\   /::\\  \\   /::\\  \\   │\n   │  /\\:\\:\\__\\ /::\\:\\__\\ /::\\:\\__\\ /\\/::\\__\\ /::\\:\\__\\ /\\:\\:\\__\\  │\n   │  \\:\\:\\/__/ \\:\\:\\/  / \\;:::/  / \\::/\\/__/ \\:\\:\\/  / \\:\\:\\/__/  │\n   │   \\::/  /   \\:\\/  /   |:\\/__/   \\:\\__\\    \\:\\/  /   \\::/  /   │\n   │    \\/__/     \\/__/     \\|__|     \\/__/     \\/__/     \\/__/    │\n   │                                                               │\n   ├───────────────────────────────────────────────────────────────┤\n   │:::::::::::::::::  SEE HOW GOOD YOU'RE IN MATH  :::::::::::::::│\n   ├───────────────────────────────────────────────────────────────┤\n   └───────────────────────────────────────────────────────────────┘\n");
 
 		}
 
@@ -70,7 +71,7 @@ namespace Series
 			// DOWN
 			//
 
-			Console.WriteLine ("   │                                                               │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
+			Terminal.PrintLn ("   │                                                               │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
 		}
 
 
@@ -82,27 +83,27 @@ namespace Series
 
 		public static void enter_to_continue (string text, int space) {
 
-			Console.Write ("   ┌───────────────────────────────────────────────────────────────┐\n   │ " + text.ToUpper ());
+			Terminal.Print ("   ┌───────────────────────────────────────────────────────────────┐\n   │ " + text.ToUpper ());
 
 			for (int i = 0; i < 60 - text.Length; i++) {
 
-				Console.Write (" ");
+				Terminal.Print (" ");
 
 			}
 
-			int x = Console.CursorLeft, y = Console.CursorTop;
+			int x = Terminal.X, y = Terminal.Y;
 
-			Console.WriteLine ("  │\n   └───────────────────────────────────────────────────────────────┘");
+			Terminal.PrintLn ("  │\n   └───────────────────────────────────────────────────────────────┘");
 
-			int newX = Console.CursorLeft, newY = Console.CursorTop;
+			int newX = Terminal.X, newY = Terminal.Y;
 
-			Console.SetCursorPosition (x , y-space);
+			Terminal.Locate (x , y-space);
 
-			Console.ReadKey ();
+			Terminal.AnyKey ();
 
-			Console.SetCursorPosition (newX, newY);
+			Terminal.Locate (newX, newY);
 
-			Console.WriteLine ();
+			Terminal.PrintLn ();
 		}
 
 
@@ -122,17 +123,27 @@ namespace Series
 
 
 
-		//   ┌─────────────┬─────────────────────────────────────────────────┐
-		//   │ KARY SERIES │::: I N P U T :::::::::::::::::::::::::::::::::::│
-		//   └─────────────┴─────────────────────────────────────────────────┘
+		// ┌─────────────┬─────────────────────────────────────────────────┐
+		// │ KARY SERIES │::: I N P U T :::::::::::::::::::::::::::::::::::│
+		// ├─────────────┴─────────────────────────────────────────────────┤
+		// │                                                               │
+		// │                                                               │
+		// │                                                               │
+		// └───────────────────────────────────────────────────────────────┘
 
 		public static string input () {
 
-			Console.Write ("   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: I N P U T :::::::::::::::::::::::::::::::::::│\n   └─────────────┴─────────────────────────────────────────────────┘\n\n    >>> ");
+			Terminal.PrintLn(Utilities.Perpend("┌─────────────┬─────────────────────────────────────────────────┐\n│ KARY SERIES │::: I N P U T :::::::::::::::::::::::::::::::::::│\n├─────────────┴─────────────────────────────────────────────────┤\n│                                                               │\n│                                                               │\n│                                                               │\n└───────────────────────────────────────────────────────────────┘", "   "));
 
-			string the_input = Console.ReadLine ();
+			Terminal.X += 5;
+			Terminal.Y -= 3;
 
-			Console.WriteLine ();
+			string the_input = Terminal.TextBox (61);
+
+			Terminal.Y++;
+
+			Terminal.PrintLn ();
+
 
 			return the_input;
 
@@ -151,7 +162,7 @@ namespace Series
 
 		public static void failed_profile (int[] inps, int[] expects) {
 
-			Console.WriteLine ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: F A I L E D :::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │");
+			Terminal.PrintLn ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: F A I L E D :::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │");
 
 			UI.WriteLine ("Your formula is no match to our sequance. Here you can see");
 			UI.WriteLine ("the first 10 index of your evaluated formula:");
@@ -167,7 +178,7 @@ namespace Series
 
 			}
 				
-			Console.WriteLine ("   │                                                               │\n   └───────────────────────────────────────────────────────────────┘\n");
+			Terminal.PrintLn ("   │                                                               │\n   └───────────────────────────────────────────────────────────────┘\n");
 		}
 
 
@@ -177,7 +188,7 @@ namespace Series
 
 		public static void setTitle (int level) {
 
-			Console.Title = "Kary Series | Level " + level;
+			Terminal.Title = "Kary Series | Level " + level;
 
 		}
 
@@ -204,13 +215,13 @@ namespace Series
 
 		public static void you_won_screen () {
 
-			Console.Clear ();
+			Terminal.Clean ();
 
-			Console.WriteLine ("\n\n   ┌┬────────┬─────────────────────────────────────────────────────┐\n   ││  KARY  │                                                     │\n   │└────────┘                                                     │\n   │                                                               │\n   │                                                               │\n   │          __     __          __          __         _          │\n   │          \\ \\   / /          \\ \\        / /        | |         │\n   │           \\ \\_/ /__  _   _   \\ \\  /\\  / /__  _ __ | |         │\n   │            \\   / _ \\| | | |   \\ \\/  \\/ / _ \\| '_ \\| |         │\n   │             | | (_) | |_| |    \\  /\\  / (_) | | | |_|         │\n   │             |_|\\___/ \\__,_|     \\/  \\/ \\___/|_| |_(_)         │\n   │                                                               │\n   │         Congratulations! You proved to be a great mater       │\n   │          in understanding sequences! Well done, Truly!        │\n   │                                                               │\n   │                                                               │\n   │                                                               │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
+			Terminal.PrintLn ("\n\n   ┌┬────────┬─────────────────────────────────────────────────────┐\n   ││  KARY  │                                                     │\n   │└────────┘                                                     │\n   │                                                               │\n   │                                                               │\n   │          __     __          __          __         _          │\n   │          \\ \\   / /          \\ \\        / /        | |         │\n   │           \\ \\_/ /__  _   _   \\ \\  /\\  / /__  _ __ | |         │\n   │            \\   / _ \\| | | |   \\ \\/  \\/ / _ \\| '_ \\| |         │\n   │             | | (_) | |_| |    \\  /\\  / (_) | | | |_|         │\n   │             |_|\\___/ \\__,_|     \\/  \\/ \\___/|_| |_(_)         │\n   │                                                               │\n   │         Congratulations! You proved to be a great mater       │\n   │          in understanding sequences! Well done, Truly!        │\n   │                                                               │\n   │                                                               │\n   │                                                               │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
 
 			UI.enter_to_continue ("press any key to exist", 0);
 
-			Console.Clear ();
+			Terminal.Clean ();
 		}
 
 
@@ -218,8 +229,8 @@ namespace Series
 
 		public static void intro_screen () {
 
-			Console.Clear ();
-			Console.WriteLine ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: I N T R O :::::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │\n   │ Welcome to Kary Series. It's about fining the general formula │\n   │ of sequences. In each level you will get 10 first index of a  │\n   │ sequence and you have to find a formula for it. For example:  │\n   │                                                               │\n   │     [ 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 ]                     │\n   │                                                               │\n   │ And then you will see a prompt like >>> which you have to     │\n   │ your formula there. You have to use parameter `x` as your     │\n   │ index number so the formula will be something like this:      │\n   │                                                               │\n   │     >>> x * 2 - 1                                             │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
+			Terminal.Clean ();
+			Terminal.PrintLn ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: I N T R O :::::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │\n   │ Welcome to Kary Series. It's about fining the general formula │\n   │ of sequences. In each level you will get 10 first index of a  │\n   │ sequence and you have to find a formula for it. For example:  │\n   │                                                               │\n   │     [ 1, 3, 5, 7, 9, 11, 13, 15, 17, 19 ]                     │\n   │                                                               │\n   │ And then you will see a prompt like >>> which you have to     │\n   │ your formula there. You have to use parameter `x` as your     │\n   │ index number so the formula will be something like this:      │\n   │                                                               │\n   │     >>> x * 2 - 1                                             │\n   │                                                               │\n   └───────────────────────────────────────────────────────────────┘");
 			UI.enter_to_continue ("Press any key to say Got It!", 0);
 		}
 

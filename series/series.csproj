@@ -30,10 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="Mermaid">
-      <HintPath>..\..\Mermaid\Mermaid\bin\Debug\Mermaid.dll</HintPath>
-    </Reference>
-    <Reference Include="ArendelleNCalc">
+    <Reference Include="ArendelleNCalc, Version=1.3.8.0, Culture=neutral, PublicKeyToken=null">
       <HintPath>..\..\Arcade IDE\Binary\ArendelleNCalc.dll</HintPath>
     </Reference>
     <Reference Include="Panther">
