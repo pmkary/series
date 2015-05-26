@@ -1,0 +1,13 @@
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/series.exe.mdb
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/series.exe
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Debug/series.exe
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/obj/x86/Debug/series.exe.mdb
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/ArendelleNCalc.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Panther.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Antlr3.Runtime.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Calculat.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Leopard.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Kary.Leopard.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Kary.Calculat.dll
+/Users/pmk/Dropbox/Document/Source Codes/KarySeries/series/bin/Debug/Kary.Foundation.dll

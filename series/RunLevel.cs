@@ -1,8 +1,14 @@
-﻿using System;
-using NCalc;
+﻿using System.Diagnostics;
+using Kary.Foundation;
+using Kary.Calculat;
 
 namespace Series
 {
+
+	/* ───────────────────────────────────────────────────────────── *
+	 * :::::::::: K A R Y   S E R I E S   R U N L E V E L :::::::::: *
+	 * ───────────────────────────────────────────────────────────── */
+
 	public class RunLevel
 	{
 		/// <summary>
@@ -40,15 +46,15 @@ namespace Series
 				}
 
 
-				Console.Clear ();
-				Console.WriteLine ("\n\n");
+				Terminal.Clean ();
+				Terminal.PrintLn ("\n\n");
 
 
 				//
 				// SHOWING THE LEVEL TO THE USER
 				//
 
-				UI.question ("Level " + level_number + " = " + ArrayTools.FloatArrayToString (level_array));
+				UI.question ("Level " + level_number + " = ⟨ " + ArrayTools.FloatArrayToString (level_array) + " ⟩");
 
 				//
 				// ASKING FOR FORMULA:
@@ -67,7 +73,7 @@ namespace Series
 				// TESTING THE 10 FIRST INDEX
 				//
 
-				int[] test_results = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+				object[] test_results = { null, null, null, null, null, null, null, null, null, null };
 
 				bool evaluation_problems = false;
 
@@ -83,15 +89,16 @@ namespace Series
 						exp.Parameters ["p"] = 0;
 					}
 						
-					int temp_result = 0;
+					object temp_result;
 
 					try {
-
-						temp_result = (int)exp.Evaluate ();
+					
+						temp_result = exp.Evaluate ();
 
 					} catch  {
 
 						temp_result = 0;
+						Debug.WriteLine (exp.ParsedExpression.ToString ());
 						evaluation_problems = true;
 
 					}
@@ -112,7 +119,7 @@ namespace Series
 
 					for (int i = 0; i < 10; i++) {
 
-						if (test_results[i] != level_array[i]) {
+						if (test_results[i].ToString () != level_array[i].ToString ()) {
 
 							equal = false;
 						}
@@ -126,17 +133,17 @@ namespace Series
 
 					} else {
 
-						Console.Clear ();
+						Terminal.Clean ();
 						UI.failed_profile (test_results, level_array);
 						UI.enter_to_continue ("try again...", 0);
-						Console.Clear ();
+						Terminal.Clean ();
 
 					}
 
 				} else {
 
 					UI.enter_to_continue ("Evaluation problems! Try again please...", 0);
-					Console.Clear ();
+					Terminal.Clean ();
 
 				}
 

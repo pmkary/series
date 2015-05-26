@@ -30,11 +30,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="ArendelleNCalc, Version=1.3.8.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>..\..\Arcade IDE\Binary\ArendelleNCalc.dll</HintPath>
+    <Reference Include="Kary.Foundation">
+      <HintPath>..\..\Leopard\Leopard\obj\Release\Kary.Foundation.dll</HintPath>
     </Reference>
-    <Reference Include="Panther">
-      <HintPath>..\..\Panther\Panther\bin\Release\Panther.dll</HintPath>
+    <Reference Include="Kary.Calculat">
+      <HintPath>..\..\..\..\..\Desktop\K\calculat-master 2\Binaries\Kary.Calculat.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

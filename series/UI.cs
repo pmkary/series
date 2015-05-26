@@ -1,13 +1,14 @@
 ﻿
 using System;
-using Panther.Text;
-using Panther;
+using Kary.Foundation;
+using Kary.Text;
 
 namespace Series
 {
-	/* ------------------------------------- *
-	 * :::::::::: U I   C L A S S :::::::::: *
-	 * ------------------------------------- */
+
+	/* ─────────────────────────────────────────────────────────────────── *
+	 * :::::::::: K A R Y   S E R I E S   U I   E L E M E N T S :::::::::: *
+	 * ─────────────────────────────────────────────────────────────────── */
 
 	public class UI
 	{
@@ -133,12 +134,12 @@ namespace Series
 
 		public static string input () {
 
-			Terminal.PrintLn(Utilities.Perpend("┌─────────────┬─────────────────────────────────────────────────┐\n│ KARY SERIES │::: I N P U T :::::::::::::::::::::::::::::::::::│\n├─────────────┴─────────────────────────────────────────────────┤\n│                                                               │\n│                                                               │\n│                                                               │\n└───────────────────────────────────────────────────────────────┘", "   "));
+			Terminal.PrintLn(Utilities.Perpend("┌─────────────┬─────────────────────────────────────────────────┐\n│ KARY SERIES │::: I N P U T :::::::::::::::::::::::::::::::::::│\n├─────────────┴─────────────────────────────────────────────────┤\n│                                                               │\n│ Answer =                                                      │\n│                                                               │\n└───────────────────────────────────────────────────────────────┘", "   "));
 
-			Terminal.X += 5;
+			Terminal.X += 14;
 			Terminal.Y -= 3;
 
-			string the_input = Terminal.TextBox (61);
+			string the_input = Terminal.TextBox (52,"", true);
 
 			Terminal.Y++;
 
@@ -160,7 +161,7 @@ namespace Series
 		// FAILED PROFILE
 		//
 
-		public static void failed_profile (int[] inps, int[] expects) {
+		public static void failed_profile (object[] inps, int[] expects) {
 
 			Terminal.PrintLn ("\n\n   ┌─────────────┬─────────────────────────────────────────────────┐\n   │ KARY SERIES │::: F A I L E D :::::::::::::::::::::::::::::::::│\n   ├─────────────┴─────────────────────────────────────────────────┤\n   │                                                               │");
 
@@ -172,7 +173,7 @@ namespace Series
 
 			for (int i = 1 ; i <= inps.Length ; i++) {
 
-				var roman_i = Panther.Text.Numerics.Roman (i).PadRight (4);
+				var roman_i = Numerics.Roman (i).PadRight (4);
 
 				UI.WriteLine (" " + roman_i + " │ " + inps [i - 1].ToString ().PadRight (24) + "│ "  + expects[i - 1 ]);
 
